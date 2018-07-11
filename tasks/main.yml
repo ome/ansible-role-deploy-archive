@@ -21,6 +21,13 @@
     owner: root
     remote_src: yes
 
+- name: deploy archive | create symlink parent directory
+  file:
+    path: "{{ deploy_archive_symlink | dirname }}"
+    recurse: yes
+    state: directory
+  when: deploy_archive_symlink | dirname | length > 0
+
 - name: deploy archive | symlink
   file:
     path: "{{ deploy_archive_symlink }}"
