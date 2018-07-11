@@ -1,0 +1,29 @@
+---
+# Default driver
+driver:
+  name: docker
+
+vagrant:
+  platforms:
+    - name: centos7
+      box: centos/7
+  providers:
+    - name: virtualbox
+      type: virtualbox
+      options:
+        memory: 512
+        cpus: 1
+  instances:
+    - name: deploy-archive
+
+docker:
+  containers:
+  - name: deploy-archive-c7
+    image: centos
+    image_version: 7
+  - name: deploy-archive-u1604
+    image: ubuntu
+    image_version: '16.04'
+
+verifier:
+  name: testinfra
