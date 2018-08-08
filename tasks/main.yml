@@ -6,6 +6,9 @@
     path: "{{ deploy_archive_dest_dir }}"
     recurse: yes
     state: directory
+    serole: _default
+    setype: _default
+    seuser: _default
 
 - name: deploy archive | download
   get_url:
