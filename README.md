@@ -1,6 +1,9 @@
 Deploy Archive
 ==============
 
+[![Build Status](https://travis-ci.org/openmicroscopy/ansible-role-deploy-archive.svg)](https://travis-ci.org/openmicroscopy/ansible-role-deploy-archive)
+[![Ansible Role](https://img.shields.io/ansible/role/27480.svg)](https://galaxy.ansible.com/openmicroscopy/deploy_archive/)
+
 Deploys an archive.
 Downloads, extracts and optionally creates a symlink.
 
@@ -31,7 +34,7 @@ Optional:
 Example playbook
 ----------------
 
-See [`playbook.yml`](playbook.yml)
+See [`playbook.yml`](molecule/default/playbook.yml)
 
 
 Author Information
