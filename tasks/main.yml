@@ -13,7 +13,9 @@
 - name: deploy archive | download
   get_url:
     url: "{{ deploy_archive_src_url }}"
-    checksum: "{{ (deploy_archive_sha256 | length > 0) | ternary('sha256:' + deploy_archive_sha256, omit) }}"
+    checksum: >-
+      {{ (deploy_archive_sha256 | length > 0) |
+       ternary('sha256:' + deploy_archive_sha256, omit) }}
     dest: "{{ deploy_archive_dest_dir }}/{{ deploy_archive_filename }}"
 
 - name: deploy archive | unarchive
