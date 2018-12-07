@@ -4,7 +4,7 @@
 - name: deploy archive | create directory
   file:
     path: "{{ deploy_archive_dest_dir }}"
-    recurse: yes
+    recurse: true
     state: directory
     serole: _default
     setype: _default
@@ -22,12 +22,12 @@
     dest: "{{ deploy_archive_dest_dir }}"
     group: root
     owner: root
-    remote_src: yes
+    remote_src: true
 
 - name: deploy archive | create symlink parent directory
   file:
     path: "{{ deploy_archive_symlink | dirname }}"
-    recurse: yes
+    recurse: true
     state: directory
   when: deploy_archive_symlink | dirname | length > 0
 
@@ -35,7 +35,7 @@
   file:
     path: "{{ deploy_archive_symlink }}"
     src: "{{ deploy_archive_dest_dir }}/{{ deploy_archive_internal_root }}"
-    force: yes
+    force: true
     state: link
   when: deploy_archive_symlink | length > 0
   notify: "{{ deploy_archive_notifies }}"
