@@ -1,8 +1,8 @@
 Deploy Archive
 ==============
 
-[![Build Status](https://travis-ci.org/openmicroscopy/ansible-role-deploy-archive.svg)](https://travis-ci.org/openmicroscopy/ansible-role-deploy-archive)
-[![Ansible Role](https://img.shields.io/ansible/role/27480.svg)](https://galaxy.ansible.com/openmicroscopy/deploy_archive/)
+[![Build Status](https://travis-ci.org/ome/ansible-role-deploy-archive.svg)](https://travis-ci.org/ome/ansible-role-deploy-archive)
+[![Ansible Role](https://img.shields.io/ansible/role/27480.svg)](https://galaxy.ansible.com/ome/deploy_archive/)
 
 Deploys an archive.
 Downloads, extracts and optionally creates a symlink.

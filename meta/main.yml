@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: deploy-archive
+  role_name: deploy_archive
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Download and deploy an archive
   company: Open Microscopy Environment
