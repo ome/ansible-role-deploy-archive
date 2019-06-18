@@ -29,4 +29,4 @@ def test_symlink(host):
 
 def test_handler_trigger_once(host):
     f = host.file('/opt/deploy-archive-test/handler-triggered')
-    assert f.content.strip() == 'triggered'
+    assert f.content.strip() == b'triggered'
