@@ -7,8 +7,7 @@ lint:
   name: yamllint
 platforms:
   - name: deploy-archive-c7
-    image: centos
-    image_version: 7
+    image: centos:7
   - name: deploy-archive-u1804
     image: ubuntu:18.04
 provisioner:
