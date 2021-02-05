@@ -4,11 +4,11 @@
 - name: deploy archive | create directory
   file:
     path: "{{ deploy_archive_dest_dir }}"
-    recurse: true
     state: directory
     serole: _default
     setype: _default
     seuser: _default
+    mode: 0755
 
 - name: deploy archive | download
   get_url:
@@ -29,8 +29,8 @@
 - name: deploy archive | create symlink parent directory
   file:
     path: "{{ deploy_archive_symlink | dirname }}"
-    recurse: true
     state: directory
+    mode: 0755
   when: deploy_archive_symlink | dirname | length > 0
 
 - name: deploy archive | symlink
