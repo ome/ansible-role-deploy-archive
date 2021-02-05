@@ -1,7 +1,7 @@
 Deploy Archive
 ==============
 
-[![Build Status](https://travis-ci.org/ome/ansible-role-deploy-archive.svg)](https://travis-ci.org/ome/ansible-role-deploy-archive)
+[![Actions Status](https://github.com/ome/ansible-role-deploy-archive/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-deploy-archive/actions)
 [![Ansible Role](https://img.shields.io/ansible/role/41369.svg)](https://galaxy.ansible.com/ome/deploy_archive/)
 
 Deploys an archive.
