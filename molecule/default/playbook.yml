@@ -8,7 +8,7 @@
         name: unzip
         state: present
   roles:
-    - role: ansible-role-deploy-archive
+    - role: ome.deploy_archive
       deploy_archive_dest_dir: /opt/deploy-archive-test
       deploy_archive_src_url: >
         https://github.com/IDR/idr.openmicroscopy.org/archive/IDR-0.5.0.zip
