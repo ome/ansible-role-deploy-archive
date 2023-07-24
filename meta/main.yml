@@ -13,4 +13,5 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - bionic
+  namespace: ome
   galaxy_tags: []
