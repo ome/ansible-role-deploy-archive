@@ -5,6 +5,7 @@
   pre_tasks:
     - name: Install unzip
       package:
+        update_cache: true
         name: unzip
         state: present
   roles:
