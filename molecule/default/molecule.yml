@@ -8,10 +8,10 @@ lint: |
     ansible-lint
     flake8
 platforms:
-  - name: deploy-archive-c7
-    image: centos:7
-  - name: deploy-archive-u1804
-    image: ubuntu:20.04
+  - name: deploy-archive-r9
+    image: rockylinux:9
+  - name: deploy-archive-u2204
+    image: ubuntu:22.04
 provisioner:
   name: ansible
   lint:
