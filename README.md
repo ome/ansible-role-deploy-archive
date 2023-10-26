@@ -2,7 +2,7 @@ Deploy Archive
 ==============
 
 [![Actions Status](https://github.com/ome/ansible-role-deploy-archive/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-deploy-archive/actions)
-[![Ansible Role](https://img.shields.io/ansible/role/41369.svg)](https://galaxy.ansible.com/ome/deploy_archive/)
+[![Ansible Role](https://img.shields.io/badge/ansible--galaxy-deploy_archive-blue.svg)](https://galaxy.ansible.com/ui/standalone/roles/ome/deploy_archive/)
 
 Deploys an archive.
 Downloads, extracts and optionally creates a symlink.
