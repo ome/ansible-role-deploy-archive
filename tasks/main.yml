@@ -2,6 +2,7 @@
 # tasks file for deploy-archive
 
 - name: deploy archive | create directory
+  become: true
   file:
     path: "{{ deploy_archive_dest_dir }}"
     state: directory
@@ -11,6 +12,7 @@
     mode: 0755
 
 - name: deploy archive | download
+  become: true
   get_url:
     url: "{{ deploy_archive_src_url }}"
     checksum: >-
@@ -19,6 +21,7 @@
     dest: "{{ deploy_archive_dest_dir }}/{{ deploy_archive_filename }}"
 
 - name: deploy archive | unarchive
+  become: true
   unarchive:
     src: "{{ deploy_archive_dest_dir }}/{{ deploy_archive_filename }}"
     dest: "{{ deploy_archive_dest_dir }}"
@@ -27,6 +30,7 @@
     remote_src: true
 
 - name: deploy archive | create symlink parent directory
+  become: true
   file:
     path: "{{ deploy_archive_symlink | dirname }}"
     state: directory
@@ -34,6 +38,7 @@
   when: deploy_archive_symlink | dirname | length > 0
 
 - name: deploy archive | symlink
+  become: true
   file:
     path: "{{ deploy_archive_symlink }}"
     src: "{{ deploy_archive_dest_dir }}/{{ deploy_archive_internal_root }}"
