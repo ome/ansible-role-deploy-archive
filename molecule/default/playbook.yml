@@ -4,7 +4,7 @@
   become: true
   pre_tasks:
     - name: Install unzip
-      package:
+      ansible.builtin.package:
         update_cache: true
         name: unzip
         state: present
@@ -22,4 +22,4 @@
 
   handlers:
     - name: deploy-archive test handler
-      shell: echo triggered >> /opt/deploy-archive-test/handler-triggered
+      ansible.builtin.shell: echo triggered >> /opt/deploy-archive-test/handler-triggered
